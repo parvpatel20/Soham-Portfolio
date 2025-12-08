@@ -1,0 +1,8 @@
+.git
+.gitignore
+README.md
+node_modules
+.replit
+design_guidelines.md
+replit.md
+components.json
