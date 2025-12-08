@@ -1,0 +1,124 @@
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { CheckCircle, ArrowRight, Users, Award, Clock } from "lucide-react";
+
+export function HeroSection() {
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      data-testid="section-hero"
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/10 dark:from-primary/10 dark:via-background dark:to-accent/5" />
+      
+      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="text-center lg:text-left order-2 lg:order-1">
+            <Badge variant="secondary" className="mb-6" data-testid="badge-hero-trust">
+              <CheckCircle className="w-3 h-3 mr-1" />
+              Trusted by 500+ Clients
+            </Badge>
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6" data-testid="text-hero-heading">
+              <span className="text-foreground">Expert</span>{" "}
+              <span className="text-primary">Accounting</span>{" "}
+              <span className="text-foreground">Solutions</span>
+            </h1>
+
+            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8" data-testid="text-hero-description">
+              Professional tax filing, GST returns, and comprehensive accounting services. 
+              We help you stay compliant while maximizing your returns.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
+              <Button
+                size="lg"
+                onClick={() => scrollToSection("#contact")}
+                data-testid="button-hero-consultation"
+                className="gap-2"
+              >
+                Schedule Consultation
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => scrollToSection("#services")}
+                data-testid="button-hero-services"
+              >
+                View Services
+              </Button>
+            </div>
+
+            <div className="flex flex-wrap justify-center lg:justify-start gap-6 md:gap-8">
+              <div className="flex items-center gap-2" data-testid="stat-hero-experience">
+                <div className="flex items-center justify-center w-10 h-10 rounded-md bg-primary/10">
+                  <Clock className="w-5 h-5 text-primary" />
+                </div>
+                <div className="text-left">
+                  <p className="text-sm font-semibold">15+ Years</p>
+                  <p className="text-xs text-muted-foreground">Experience</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2" data-testid="stat-hero-clients">
+                <div className="flex items-center justify-center w-10 h-10 rounded-md bg-primary/10">
+                  <Users className="w-5 h-5 text-primary" />
+                </div>
+                <div className="text-left">
+                  <p className="text-sm font-semibold">500+</p>
+                  <p className="text-xs text-muted-foreground">Clients Served</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2" data-testid="stat-hero-success">
+                <div className="flex items-center justify-center w-10 h-10 rounded-md bg-primary/10">
+                  <Award className="w-5 h-5 text-primary" />
+                </div>
+                <div className="text-left">
+                  <p className="text-sm font-semibold">99%</p>
+                  <p className="text-xs text-muted-foreground">Success Rate</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-end" data-testid="hero-image-container">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-2xl blur-2xl" />
+              <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-2xl bg-muted/50 border border-border overflow-hidden flex items-center justify-center">
+                <div className="text-center p-8">
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-4xl font-bold text-primary">SP</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">Professional Photo</p>
+                  <p className="text-xs text-muted-foreground/60 mt-1">Replace with your image</p>
+                </div>
+              </div>
+              
+              <div className="absolute -bottom-4 -left-4 bg-card border border-border rounded-lg p-3 shadow-lg" data-testid="badge-hero-refund">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-medium">Max Refund</p>
+                    <p className="text-xs text-muted-foreground">Guaranteed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
