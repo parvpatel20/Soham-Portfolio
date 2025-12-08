@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./theme-toggle";
-import logoImage from "@assets/logo_1765176818920.png";
+import logoImage from "@assets/Screenshot_2025-12-08_122855-removebg-preview_1765177220077.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
