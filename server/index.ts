@@ -1,38 +1,15 @@
-import express from "express";
-import { serveStatic } from "./static";
-import { createServer } from "http";
+import { createServer } from "vite";
 
-const app = express();
-const httpServer = createServer(app);
-
-function log(message: string, source = "server") {
-  const formattedTime = new Date().toLocaleTimeString("en-US", {
-    hour: "numeric",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: true,
+async function startDev() {
+  const server = await createServer({
+    server: {
+      host: "0.0.0.0",
+      port: 5000,
+    },
   });
 
-  console.log(`${formattedTime} [${source}] ${message}`);
+  await server.listen();
+  console.log(`Static site running at http://localhost:5000`);
 }
 
-(async () => {
-  if (process.env.NODE_ENV === "production") {
-    serveStatic(app);
-  } else {
-    const { setupVite } = await import("./vite");
-    await setupVite(httpServer, app);
-  }
-
-  const port = parseInt(process.env.PORT || "5000", 10);
-  httpServer.listen(
-    {
-      port,
-      host: "0.0.0.0",
-      reusePort: true,
-    },
-    () => {
-      log(`Static site serving on port ${port}`);
-    },
-  );
-})();
+startDev().catch(console.error);
