@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Clock, Headphones } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
-import heroImage from "@assets/WhatsApp_Image_2025-12-07_at_22.46.18_02a973e3_1765176723312.jpg";
+import logoImage from "@assets/Screenshot_2025-12-08_122855-removebg-preview_1765177220077.png";
 
 export function HeroSection() {
   return (
@@ -84,12 +84,12 @@ export function HeroSection() {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end" data-testid="hero-image-container">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-2xl blur-2xl" />
-              <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-2xl bg-muted/50 border border-border overflow-hidden">
+              <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-2xl flex items-center justify-center p-6">
                 <img 
-                  src={heroImage} 
-                  alt="Soham Patel - Professional Accountant" 
-                  className="w-full h-full object-cover object-top"
-                  data-testid="img-hero-profile"
+                  src={logoImage} 
+                  alt="S.V. Patel Accounting Logo" 
+                  className="w-full h-full object-contain"
+                  data-testid="img-hero-logo"
                 />
               </div>
             </div>
