@@ -5,8 +5,7 @@ import {
   Receipt, 
   Building2, 
   CreditCard, 
-  Landmark,
-  ArrowRight
+  Landmark
 } from "lucide-react";
 
 const services = [
@@ -71,11 +70,8 @@ export function ServicesSection() {
               data-testid={`card-service-${service.id}`}
             >
               <CardHeader className="pb-4">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                    <service.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-muted-foreground/40 group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                  <service.icon className="w-6 h-6 text-primary" />
                 </div>
                 <CardTitle className="text-xl mt-4" data-testid={`text-service-title-${service.id}`}>{service.title}</CardTitle>
               </CardHeader>

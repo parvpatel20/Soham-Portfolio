@@ -5,13 +5,11 @@ const highlights = [
   "Bachelor's in Commerce & Accounting",
   "Certified Tax Professional",
   "GST Practitioner Certification",
-  "15+ Years Industry Experience",
+  "5+ Years Industry Experience",
 ];
 
 const stats = [
-  { value: "15+", label: "Years Experience", id: "years-experience" },
-  { value: "500+", label: "Clients Served", id: "clients-served" },
-  { value: "99%", label: "Success Rate", id: "success-rate" },
+  { value: "5+", label: "Years Experience", id: "years-experience" },
   { value: "24/7", label: "Support Available", id: "support-available" },
 ];
 
@@ -26,10 +24,10 @@ export function AboutSection() {
               Soham Patel
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed" data-testid="text-about-intro">
-              As a dedicated accounting professional based in Surat, I bring over 15 years of 
+              As a dedicated accounting professional based in Surat, I bring years of 
               experience in providing comprehensive financial services to individuals and businesses. 
               My commitment to accuracy, transparency, and client satisfaction has helped me build 
-              lasting relationships with over 500 clients.
+              lasting relationships with clients across various industries.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed" data-testid="text-about-description">
               I specialize in simplifying complex tax matters and ensuring full compliance with 
@@ -51,7 +49,7 @@ export function AboutSection() {
               ))}
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 gap-4 max-w-md">
               {stats.map((stat, index) => (
                 <div 
                   key={index}

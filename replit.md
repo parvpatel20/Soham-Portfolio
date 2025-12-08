@@ -1,7 +1,7 @@
 # Soham Patel - Professional Accountant Portfolio
 
 ## Overview
-A modern, professional portfolio website for Soham Patel, a certified accountant based in Surat, India. The website showcases accounting services, professional background, client testimonials, and provides a contact form for consultations.
+A modern, professional portfolio website for Soham Patel, a certified accountant based in Surat, India. The website showcases accounting services, professional background, and provides contact information through phone, email, and WhatsApp.
 
 ## Project Architecture
 
@@ -10,12 +10,10 @@ A modern, professional portfolio website for Soham Patel, a certified accountant
 - **Styling**: Tailwind CSS with Shadcn UI components
 - **Routing**: Wouter for client-side routing
 - **State Management**: TanStack Query for server state
-- **Forms**: React Hook Form with Zod validation
 
 ### Backend (Express.js)
 - **Server**: Express.js with TypeScript
 - **Storage**: In-memory storage (MemStorage)
-- **Validation**: Zod schemas for request validation
 
 ### File Structure
 ```
@@ -24,13 +22,12 @@ client/
 │   ├── components/
 │   │   ├── ui/              # Shadcn UI components
 │   │   ├── navigation.tsx   # Sticky navigation with scroll behavior
-│   │   ├── hero-section.tsx # Hero with CTA buttons
+│   │   ├── hero-section.tsx # Hero with CTA buttons (Call & WhatsApp)
 │   │   ├── services-section.tsx # 6 service cards
 │   │   ├── about-section.tsx    # Professional bio
 │   │   ├── value-props-section.tsx # Why choose us
-│   │   ├── testimonials-section.tsx # Client reviews
-│   │   ├── cta-section.tsx  # Call to action
-│   │   ├── contact-section.tsx # Contact form
+│   │   ├── cta-section.tsx  # Call to action (Call & WhatsApp)
+│   │   ├── contact-section.tsx # Contact info (Phone, Email, WhatsApp)
 │   │   ├── footer.tsx       # Site footer
 │   │   └── theme-toggle.tsx # Dark/light mode toggle
 │   ├── pages/
@@ -50,8 +47,8 @@ shared/
 - **Responsive Design**: Mobile-first approach with breakpoints for tablet and desktop
 - **Dark Mode**: Toggle between light and dark themes with localStorage persistence
 - **Smooth Scroll Navigation**: Click navigation links to smoothly scroll to sections
-- **Contact Form**: Validated form with backend API integration
-- **Professional Sections**: Hero, Services (6), About, Why Us, Testimonials, CTA, Contact, Footer
+- **Contact Methods**: Phone, Email, and WhatsApp (no contact form)
+- **Professional Sections**: Hero, Services (6), About, Why Us, CTA, Contact, Footer
 
 ## Services Offered
 1. Accounting & Bookkeeping
@@ -64,17 +61,19 @@ shared/
 ## Contact Information
 - **Phone**: 9016980875
 - **Email**: psoham1056@gmail.com
+- **WhatsApp**: wa.me/919016980875
 - **Address**: 209, Blue Ski Commerce Square, Bamroli Road, Surat - 395002
 
-## API Endpoints
-- `POST /api/contact` - Submit contact form
-- `GET /api/contact` - Get all contact submissions (admin)
-
 ## Design System
-- **Primary Color**: Green (HSL 158 64% 32%)
+- **Primary Color**: Royal Blue (HSL 220 70% 45%)
+- **Accent Color**: Bright Golden (HSL 45 90% 55%)
 - **Typography**: Inter font family
 - **Spacing**: Consistent padding/gap using Tailwind units
 - **Components**: Built with Shadcn UI primitives
+
+## Key Stats Displayed
+- 5+ Years Experience
+- 24/7 Support Available
 
 ## Development
 ```bash
@@ -83,6 +82,9 @@ npm run build  # Build for production
 ```
 
 ## User Preferences
-- Professional, modern design aesthetic
-- Green color scheme aligned with S.V. Patel Accounting branding
-- Image placeholders for profile photos (to be replaced by user)
+- Royal blue and golden color scheme
+- No testimonials section
+- No contact form - only direct contact methods (phone, email, WhatsApp)
+- No inflated statistics (removed 500+ clients, 99% success rate)
+- Clean service cards without arrows
+- S.V. Patel logo prominently displayed in navigation

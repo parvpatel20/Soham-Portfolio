@@ -8,7 +8,6 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
   { label: "Why Us", href: "#why-us" },
-  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -77,13 +76,6 @@ export function Navigation() {
           <div className="flex items-center gap-2">
             <ThemeToggle />
             <Button
-              onClick={() => scrollToSection("#contact")}
-              className="hidden sm:flex"
-              data-testid="button-nav-consultation"
-            >
-              Get Consultation
-            </Button>
-            <Button
               variant="ghost"
               size="icon"
               className="md:hidden"
@@ -117,13 +109,6 @@ export function Navigation() {
                 {link.label}
               </button>
             ))}
-            <Button
-              onClick={() => scrollToSection("#contact")}
-              className="mt-2"
-              data-testid="button-mobile-consultation"
-            >
-              Get Consultation
-            </Button>
           </div>
         </div>
       </nav>

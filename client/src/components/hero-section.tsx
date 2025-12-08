@@ -1,15 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { CheckCircle, ArrowRight, Users, Award, Clock } from "lucide-react";
+import { Phone, Clock, Headphones } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 
 export function HeroSection() {
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section
       id="home"
@@ -24,11 +17,6 @@ export function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="text-center lg:text-left order-2 lg:order-1">
-            <Badge variant="secondary" className="mb-6" data-testid="badge-hero-trust">
-              <CheckCircle className="w-3 h-3 mr-1" />
-              Trusted by 500+ Clients
-            </Badge>
-
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6" data-testid="text-hero-heading">
               <span className="text-foreground">Expert</span>{" "}
               <span className="text-primary">Accounting</span>{" "}
@@ -43,20 +31,30 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
               <Button
                 size="lg"
-                onClick={() => scrollToSection("#contact")}
-                data-testid="button-hero-consultation"
+                asChild
+                data-testid="button-hero-call"
                 className="gap-2"
               >
-                Schedule Consultation
-                <ArrowRight className="w-4 h-4" />
+                <a href="tel:9016980875">
+                  <Phone className="w-4 h-4" />
+                  Call Now
+                </a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                onClick={() => scrollToSection("#services")}
-                data-testid="button-hero-services"
+                asChild
+                data-testid="button-hero-whatsapp"
+                className="gap-2"
               >
-                View Services
+                <a
+                  href="https://wa.me/919016980875"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SiWhatsapp className="w-4 h-4" />
+                  Chat on WhatsApp
+                </a>
               </Button>
             </div>
 
@@ -66,26 +64,17 @@ export function HeroSection() {
                   <Clock className="w-5 h-5 text-primary" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-semibold">15+ Years</p>
+                  <p className="text-sm font-semibold">5+ Years</p>
                   <p className="text-xs text-muted-foreground">Experience</p>
                 </div>
               </div>
-              <div className="flex items-center gap-2" data-testid="stat-hero-clients">
+              <div className="flex items-center gap-2" data-testid="stat-hero-support">
                 <div className="flex items-center justify-center w-10 h-10 rounded-md bg-primary/10">
-                  <Users className="w-5 h-5 text-primary" />
+                  <Headphones className="w-5 h-5 text-primary" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-semibold">500+</p>
-                  <p className="text-xs text-muted-foreground">Clients Served</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2" data-testid="stat-hero-success">
-                <div className="flex items-center justify-center w-10 h-10 rounded-md bg-primary/10">
-                  <Award className="w-5 h-5 text-primary" />
-                </div>
-                <div className="text-left">
-                  <p className="text-sm font-semibold">99%</p>
-                  <p className="text-xs text-muted-foreground">Success Rate</p>
+                  <p className="text-sm font-semibold">24/7</p>
+                  <p className="text-xs text-muted-foreground">Support</p>
                 </div>
               </div>
             </div>
@@ -101,18 +90,6 @@ export function HeroSection() {
                   </div>
                   <p className="text-sm text-muted-foreground">Professional Photo</p>
                   <p className="text-xs text-muted-foreground/60 mt-1">Replace with your image</p>
-                </div>
-              </div>
-              
-              <div className="absolute -bottom-4 -left-4 bg-card border border-border rounded-lg p-3 shadow-lg" data-testid="badge-hero-refund">
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
-                    <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-medium">Max Refund</p>
-                    <p className="text-xs text-muted-foreground">Guaranteed</p>
-                  </div>
                 </div>
               </div>
             </div>

@@ -50,8 +50,8 @@ export function Footer() {
               </div>
             </a>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6" data-testid="text-footer-description">
-              Professional accounting services with over 15 years of experience. 
-              Trusted by 500+ clients for tax filing, GST returns, and financial planning.
+              Professional accounting services with years of experience. 
+              Trusted for tax filing, GST returns, and financial planning.
             </p>
             <div className="flex gap-3">
               <a

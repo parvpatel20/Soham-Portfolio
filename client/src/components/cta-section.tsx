@@ -1,14 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 
 export function CTASection() {
-  const scrollToContact = () => {
-    const element = document.querySelector("#contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="py-20 md:py-28 bg-primary relative overflow-hidden" data-testid="section-cta">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
@@ -20,7 +14,7 @@ export function CTASection() {
           Ready to Simplify Your Finances?
         </h2>
         <p className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl mx-auto" data-testid="text-cta-description">
-          Get started with a free consultation and discover how we can help you 
+          Get started today and discover how we can help you 
           save time, reduce stress, and maximize your returns.
         </p>
 
@@ -28,12 +22,13 @@ export function CTASection() {
           <Button
             size="lg"
             variant="secondary"
-            onClick={scrollToContact}
             className="gap-2"
-            data-testid="button-cta-consultation"
+            asChild
           >
-            Schedule Free Consultation
-            <ArrowRight className="w-4 h-4" />
+            <a href="tel:9016980875" data-testid="link-cta-call">
+              <Phone className="w-4 h-4" />
+              Call Now: 9016980875
+            </a>
           </Button>
           <Button
             size="lg"
@@ -41,9 +36,14 @@ export function CTASection() {
             className="gap-2 bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
             asChild
           >
-            <a href="tel:9016980875" data-testid="link-cta-call">
-              <Phone className="w-4 h-4" />
-              Call Now: 9016980875
+            <a
+              href="https://wa.me/919016980875"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="link-cta-whatsapp"
+            >
+              <SiWhatsapp className="w-4 h-4" />
+              Chat on WhatsApp
             </a>
           </Button>
         </div>
