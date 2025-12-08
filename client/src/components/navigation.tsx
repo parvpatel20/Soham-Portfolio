@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Calculator } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./theme-toggle";
+import logoImage from "@assets/logo_1765176818920.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -51,13 +52,12 @@ export function Navigation() {
             className="flex items-center gap-2"
             data-testid="link-nav-logo"
           >
-            <div className="flex items-center justify-center w-10 h-10 rounded-md bg-primary">
-              <Calculator className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-lg font-bold tracking-tight" data-testid="text-brand-name">S.V. Patel</span>
-              <span className="text-xs text-muted-foreground -mt-1" data-testid="text-brand-tagline">Accounting</span>
-            </div>
+            <img 
+              src={logoImage} 
+              alt="S.V. Patel Accounting Logo" 
+              className="h-10 w-auto object-contain"
+              data-testid="img-nav-logo"
+            />
           </a>
 
           <div className="hidden md:flex items-center gap-1">

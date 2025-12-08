@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Clock, Headphones } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
+import heroImage from "@assets/WhatsApp_Image_2025-12-07_at_22.46.18_02a973e3_1765176723312.jpg";
 
 export function HeroSection() {
   return (
@@ -83,14 +84,13 @@ export function HeroSection() {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end" data-testid="hero-image-container">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-2xl blur-2xl" />
-              <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-2xl bg-muted/50 border border-border overflow-hidden flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-4xl font-bold text-primary">SP</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Professional Photo</p>
-                  <p className="text-xs text-muted-foreground/60 mt-1">Replace with your image</p>
-                </div>
+              <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-2xl bg-muted/50 border border-border overflow-hidden">
+                <img 
+                  src={heroImage} 
+                  alt="Soham Patel - Professional Accountant" 
+                  className="w-full h-full object-cover object-top"
+                  data-testid="img-hero-profile"
+                />
               </div>
             </div>
           </div>
