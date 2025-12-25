@@ -65,7 +65,7 @@ export function HeroSection() {
                   <Clock className="w-5 h-5 text-primary" />
                 </div>
                 <div className="text-left">
-                  <p className="text-sm font-semibold">5+ Years</p>
+                  <p className="text-sm font-semibold">2+ Years</p>
                   <p className="text-xs text-muted-foreground">Experience</p>
                 </div>
               </div>
