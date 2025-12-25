@@ -6,7 +6,7 @@ const highlights = [
   "Bachelor's in Commerce & Accounting",
   "Certified Tax Professional",
   "GST Practitioner Certification",
-  "5+ Years Industry Experience",
+  "2+ Years Industry Experience",
 ];
 
 const stats = [
