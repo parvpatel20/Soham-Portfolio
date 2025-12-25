@@ -10,7 +10,7 @@ const highlights = [
 ];
 
 const stats = [
-  { value: "5+", label: "Years Experience", id: "years-experience" },
+  { value: "2+", label: "Years Experience", id: "years-experience" },
   { value: "24/7", label: "Support Available", id: "support-available" },
 ];
 
